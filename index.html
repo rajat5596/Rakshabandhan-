@@ -81,7 +81,7 @@
   </script>
 <!-- 💌 Share Box -->
 <div class="share-box">
-  <p>अपना नाम लिखें और व्हाट्सऐप शुभकामना भेजें 👇</p>
+  <p>अपना नाम लिखें और शुभकामना शेयर करें 👇</p>
   <input type="text" id="nameInput" placeholder="अपना नाम लिखें">
   <br>
   <button onclick="shareWish()">📤 शुभकामना भेजें</button>
@@ -91,7 +91,7 @@
   function shareWish() {
     const name = document.getElementById("nameInput").value.trim();
     if (name) {
-      const message = `💖 ${name} की तरफ से रक्षाबंधन की हार्दिक शुभकामनाएं! 🎊`;
+      const message = `💖 ${name} की तरफ से रक्षाबंधन की हार्दिक शुभकामनाएं! 🎊\n👉 देखिए: https://rakshabandhan-green.vercel.app/`;
       const encoded = encodeURIComponent(message);
       window.open(`https://wa.me/?text=${encoded}`, "_blank");
     } else {
