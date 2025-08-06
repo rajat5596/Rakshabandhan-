@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>🎁 रक्षाबंधन विशेष</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding: 20px;
+    }
+    .gif {
+      width: 90%;
+      max-width: 300px;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+    .button {
+      padding: 12px 20px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      max-width: 300px;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎵 Background Music -->
+  <audio autoplay loop>
+    <source src="music/rakhi.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1>🎉 रक्षाबंधन की हार्दिक शुभकामनाएं!</h1>
+
+  <!-- 🎆 Rakhi GIF -->
+  <img src="images/rakhi.gif" class="gif" alt="Rakhi GIF">
+
+  <!-- 🎁 Send Gift Button -->
+  <a href="https://amzn.to/40VEjGF" target="_blank">
+    <button class="button">🎁 गिफ्ट भेजें</button>
+  </a>
+
+  <!-- 📝 Name + Share Button -->
+  <div>
+    <h3>💌 अपना नाम डालें और शुभकामना भेजें:</h3>
+    <input type="text" id="name" placeholder="आपका नाम">
+    <br>
+    <button class="button" onclick="shareWish()">📤 शेयर करें</button>
+    <p id="output" style="margin-top:10px; color:green;"></p>
+  </div>
+
+  <!-- 📢 Adsterra Ad (Bottom) -->
+  <div style="margin-top:30px;">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'fa3ec2ba10a5e26285bd95e654548af5',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/fa3ec2ba10a5e26285bd95e654548af5/invoke.js"></script>
+  </div>
+
+  <script>
+    function shareWish() {
+      const name = document.getElementById("name").value.trim();
+      if (name === "") {
+        alert("कृपया अपना नाम दर्ज करें");
+        return;
+      }
+      const message = `🎉 रक्षाबंधन की शुभकामनाएं!\nआपका नाम: ${name}\n📲 मेरी विशेष Rakhi App देखें:\nhttps://your-vercel-link.vercel.app`;
+      if (navigator.share) {
+        navigator.share({
+          title: 'Rakhi Wishes',
+          text: message,
+        }).catch(err => alert("शेयर नहीं हो पाया"));
+      } else {
+        document.getElementById("output").innerText = "👇 यह मैसेज कॉपी करें और शेयर करें:\n\n" + message;
+      }
+    }
+  </script>
+
+</body>
+</html>
