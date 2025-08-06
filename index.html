@@ -37,16 +37,39 @@
   </style>
 </head>
 <body>
+<!-- ✅ Adsterra Top Banner Ad -->
+<div style="width:100%; display:flex; justify-content:center;">
+  <script type="text/javascript">
+    atOptions = {
+      'key' : '1103b20b1d708d29a34f48f4e512eaac',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//www.highperformanceformat.com/1103b20b1d708d29a34f48f4e512eaac/invoke.js"></script>
+</div>
+<!-- 🎉 Rakhi Heading -->
+<h1>🎊 रक्षाबंधन की हार्दिक शुभकामनाएं 🎊</h1>
 
-  <!-- 🎵 Background Music -->
-  <audio controls autoplay>
+<!-- 🖼️ Rakhi GIF -->
+<img src="rakhi.gif" alt="राखी GIF" width="250">
+
+<!-- 🎵 Rakhi Bhajan (Audio Auto-Play + Unmute on Tap) -->
+<audio autoplay muted id="rakhiAudio">
   <source src="rakhi.mp3" type="audio/mpeg">
   आपका ब्राउज़र ऑडियो को सपोर्ट नहीं करता।
 </audio>
 
-  <h1>🎉 रक्षाबंधन की हार्दिक शुभकामनाएं!</h1>
-
-<img src="rakhi.gif" alt="राखी GIF" width="250">
+<script>
+  // Mobile पर user interaction के बाद ही unmute होता है
+  window.addEventListener("click", function () {
+    const audio = document.getElementById("rakhiAudio");
+    audio.muted = false;
+    audio.play().catch(() => {});
+  });
+</script>
 
   <!-- 🎁 Send Gift Button -->
   <a href="https://amzn.to/40VEjGF" target="_blank">
