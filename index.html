@@ -36,7 +36,32 @@
     }
   </style>
 </head>
-<body>
+<body> 
+  <!-- 🎉 Heading -->
+<h1>🎊 रक्षाबंधन की हार्दिक शुभकामनाएं 🎊</h1>
+
+<!-- 🖼️ Rakhi GIF -->
+<img src="rakhi.gif" alt="राखी GIF" width="250">
+
+<!-- 🎵 Rakhi Bhajan (Auto-Play, Unmute after Tap) -->
+<audio id="rakhiAudio" autoplay muted playsinline>
+  <source src="rakhi.mp3" type="audio/mpeg">
+  आपका ब्राउज़र ऑडियो को सपोर्ट नहीं करता।
+</audio>
+
+<script>
+  // Auto-unmute after first user interaction
+  function enableAudio() {
+    const audio = document.getElementById("rakhiAudio");
+    if (audio.muted) {
+      audio.muted = false;
+      audio.play().catch(() => {});
+    }
+    // Remove listener after first tap
+    window.removeEventListener("click", enableAudio);
+  }
+  window.addEventListener("click", enableAudio);
+</script>
 <!-- ✅ Adsterra Top Banner Ad -->
 <div style="width:100%; display:flex; justify-content:center;">
   <script type="text/javascript">
@@ -50,26 +75,6 @@
   </script>
   <script type="text/javascript" src="//www.highperformanceformat.com/1103b20b1d708d29a34f48f4e512eaac/invoke.js"></script>
 </div>
-<!-- 🎉 Rakhi Heading -->
-<h1>🎊 रक्षाबंधन की हार्दिक शुभकामनाएं 🎊</h1>
-
-<!-- 🖼️ Rakhi GIF -->
-<img src="rakhi.gif" alt="राखी GIF" width="250">
-
-<!-- 🎵 Rakhi Bhajan (Audio Auto-Play + Unmute on Tap) -->
-<audio autoplay muted id="rakhiAudio">
-  <source src="rakhi.mp3" type="audio/mpeg">
-  आपका ब्राउज़र ऑडियो को सपोर्ट नहीं करता।
-</audio>
-
-<script>
-  // Mobile पर user interaction के बाद ही unmute होता है
-  window.addEventListener("click", function () {
-    const audio = document.getElementById("rakhiAudio");
-    audio.muted = false;
-    audio.play().catch(() => {});
-  });
-</script>
 
   <!-- 🎁 Send Gift Button -->
   <a href="https://amzn.to/40VEjGF" target="_blank">
